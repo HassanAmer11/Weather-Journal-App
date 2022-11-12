@@ -17,12 +17,29 @@ const cors = require('cors');
 app.use(cors());
 // initialize the main project folder
 //This line of code connects our server-side code (the code in the server.js file) to our client-side code 
-app.use(express.static('demo'))
+app.use(express.static('website'))
 
 const port = 8000;
-const server = app.listen(port,listening);
+/*Creating A Local Server With Node & Express
+Utilize the .listen() method with two arguments port and listening (is a callback funcation);
+*/
+const server = app.listen(port,listening); 
 
 function listening(){
     console.log("server is running");
-    console.log(`server running on port ${port}`);
+    console.log(`server running on localhost:${port}`);
 };
+
+projectData = {};  // object to contain data 
+
+const reseviceMethod = (req, res) => {
+    projectData = req.body;  // get data form request body
+    console.log("post",projectData);
+};
+
+app.post('/reseviceData', reseviceMethod);
+
+app.get('/all',  (req, res)=> {
+    console.log("get",projectData); 
+    res.send(projectData); // sen data to client
+});

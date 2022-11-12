@@ -1,0 +1,87 @@
+body{
+    background-image: url('bgImage.jpg');
+    margin: 0;
+    padding: 0;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#app{
+    margin: auto;
+    width: 1000px;
+    text-align: center;
+}
+
+.headline {
+    color: #0a113a;
+    font-size: 25px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+input,textarea,button{  
+    width: 70%;
+    height: 32px;
+    border: 1px solid;
+    border-radius: 11px;
+    text-align: center;
+    font-size: 15px;
+}
+
+textarea{
+    resize: none;
+}
+
+button{
+    margin-top: 18px;
+    background: #0a113a;
+    cursor: pointer;
+    color: #fff;
+}
+
+#messageError{   
+    background-color: #e91e63;
+    color: white;
+    font-size: large;
+    width: 22%;
+    text-align: center;
+    margin: 0px auto 12px;
+    border-radius: 1px 0px 30px 30px;
+    display: block;
+}
+
+.entry{
+  width: 100%;
+  background: #07133340;
+  margin: 50px auto;
+  border-radius: 10px;
+  height: 208px;
+  opacity: 0;
+  transition: all 2s ease; 
+}
+
+.title{
+  padding: 10px;
+  text-align: center;
+  font-size: 17px;
+}
+
+#entryHolder{
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-rows: 60%;
+  grid-template-columns: 50% 50%;
+  font-size: 1.5vw;
+}
+
+
+#temp,
+#city{
+  font-size: 3vw;
+}
