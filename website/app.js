@@ -8,7 +8,7 @@
 
 //#region get data from openweathermap api
     const runApiWeather = async(zipCode)=>{  // async funcation that get data from api
-        const apiKey = 'c75967657a7b3728dad840fb5f6b4370&units=metric';  //imperial
+        const apiKey = 'c75967657a7b3728dad840fb5f6b4370&units=imperial';  //metric
         let url = `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${apiKey}`;
         try{
             const apiResponce = await fetch(url); // get (The default method ) data from api with api url
@@ -85,7 +85,7 @@ const retrieveData = async () => {  // to get data from server and present it in
     const allData = await request.json();
     console.log(allData)
     // Write updated data to DOM elements
-    document.getElementById('temp').innerHTML = Math.round(allData.temp)+ '&degC';
+    document.getElementById('temp').innerHTML = Math.round(allData.temp)+ '&degF';
     document.getElementById('city').innerHTML = allData.city;
     document.getElementById('content').innerHTML = allData.feeling;
     document.getElementById("date").innerHTML =allData.newDate;
