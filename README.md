@@ -31,7 +31,7 @@ I would like to thank Udacity and all the tuters for this wonderful content.
 * https://developer.mozilla.org/en-US/docs/Web/API/fetch
 * https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
-* https://classroom.udacity.com/nanodegrees
+* https://classroom.udacity.com/me
 
 
 ## Table of Contents
